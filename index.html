@@ -36,7 +36,6 @@
             line-height: 1.6;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -48,7 +47,7 @@
             border-radius: 5px;
         }
 
-        /* Stars Background Animation */
+        /* Stars Background */
         .stars {
             position: fixed;
             top: 0;
@@ -123,7 +122,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px 30px;
+            padding: 12px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -135,13 +134,13 @@
         }
 
         nav.scrolled {
-            padding: 10px 30px;
+            padding: 10px 25px;
             background: rgba(26, 15, 46, 0.98);
         }
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--gold);
             text-decoration: none;
             display: flex;
@@ -151,7 +150,7 @@
         }
 
         .logo i {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             animation: rotate-slow 10s linear infinite;
         }
 
@@ -162,7 +161,7 @@
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 22px;
             list-style: none;
             align-items: center;
         }
@@ -170,7 +169,7 @@
         .nav-links a {
             color: var(--cream);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             position: relative;
             padding: 5px 0;
             transition: color 0.3s ease;
@@ -199,12 +198,12 @@
         .nav-whatsapp {
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white !important;
-            padding: 8px 20px !important;
+            padding: 7px 18px !important;
             border-radius: 50px;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             animation: pulse-glow 2s ease-in-out infinite;
         }
 
@@ -223,19 +222,19 @@
             background: none;
             border: none;
             color: var(--gold);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             cursor: pointer;
             padding: 5px;
         }
 
-        /* Hero Section */
+        /* ===== HERO SECTION ===== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 100px 30px 60px;
+            padding: 80px 25px 50px;
             overflow: hidden;
         }
 
@@ -244,16 +243,17 @@
             max-width: 800px;
             z-index: 1;
             position: relative;
+            width: 100%;
         }
 
         .hero-badge {
             display: inline-block;
-            padding: 8px 20px;
+            padding: 6px 18px;
             border: 1px solid var(--gold);
             border-radius: 50px;
             color: var(--gold);
-            font-size: 0.85rem;
-            margin-bottom: 25px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
             animation: fade-in-up 1s ease;
             background: rgba(212, 175, 55, 0.1);
             white-space: nowrap;
@@ -261,10 +261,10 @@
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             color: var(--white);
-            margin-bottom: 15px;
-            line-height: 1.3;
+            margin-bottom: 12px;
+            line-height: 1.25;
             animation: fade-in-up 1s ease 0.2s both;
             text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
         }
@@ -272,32 +272,33 @@
         .hero h1 span {
             color: var(--gold);
             display: block;
-            font-size: 2.4rem;
+            font-size: 2.1rem;
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: rgba(245, 240, 232, 0.8);
-            margin-bottom: 35px;
+            margin-bottom: 28px;
             animation: fade-in-up 1s ease 0.4s both;
             font-weight: 300;
-            max-width: 600px;
+            max-width: 550px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             justify-content: center;
             animation: fade-in-up 1s ease 0.6s both;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 32px;
+            padding: 12px 28px;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -305,7 +306,7 @@
             border: none;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
             white-space: nowrap;
         }
 
@@ -358,29 +359,29 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 12px;
-            padding: 15px;
+            padding: 12px;
             backdrop-filter: blur(5px);
             animation: float-card 18s ease-in-out infinite;
-            max-width: 160px;
+            max-width: 140px;
             text-align: center;
         }
 
         .float-card i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--gold);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
         .float-card p {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: rgba(245, 240, 232, 0.7);
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
-        .fc-1 { top: 15%; left: 8%; animation-delay: 0s; }
-        .fc-2 { top: 55%; right: 8%; animation-delay: -6s; }
-        .fc-3 { bottom: 15%; left: 12%; animation-delay: -12s; }
+        .fc-1 { top: 12%; left: 6%; animation-delay: 0s; }
+        .fc-2 { top: 60%; right: 6%; animation-delay: -6s; }
+        .fc-3 { bottom: 12%; left: 10%; animation-delay: -12s; }
 
         @keyframes float-card {
             0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -389,7 +390,7 @@
 
         /* Trust Badges Section */
         .trust-section {
-            padding: 50px 30px;
+            padding: 45px 25px;
             background: rgba(26, 15, 46, 0.5);
             position: relative;
             z-index: 1;
@@ -400,7 +401,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 25px;
         }
 
         .trust-item {
@@ -409,62 +410,62 @@
         }
 
         .trust-item i {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .trust-item h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--white);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .trust-item p {
             color: rgba(245, 240, 232, 0.7);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             line-height: 1.5;
         }
 
         /* Section Styles */
         section {
-            padding: 80px 30px;
+            padding: 70px 25px;
             position: relative;
             z-index: 1;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
+            max-width: 650px;
+            margin: 0 auto 45px;
         }
 
         .section-header h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             color: var(--gold);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .section-header p {
             color: rgba(245, 240, 232, 0.8);
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.7;
         }
 
         .divider {
-            width: 80px;
+            width: 70px;
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            margin: 15px auto;
+            margin: 12px auto;
         }
 
         /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -473,7 +474,7 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: 16px;
-            padding: 35px 25px;
+            padding: 30px 22px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
@@ -502,15 +503,15 @@
         }
 
         .service-icon {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             background: rgba(212, 175, 55, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.6rem;
+            margin: 0 auto 18px;
+            font-size: 1.5rem;
             color: var(--gold);
             border: 2px solid rgba(212, 175, 55, 0.3);
             transition: all 0.3s ease;
@@ -524,15 +525,15 @@
 
         .service-card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--white);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .service-card p {
             color: rgba(245, 240, 232, 0.7);
             line-height: 1.7;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
         /* Trust Quotes Section */
@@ -543,7 +544,7 @@
         .quotes-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -551,7 +552,7 @@
         .quote-card {
             background: rgba(255, 255, 255, 0.05);
             border-left: 3px solid var(--gold);
-            padding: 25px;
+            padding: 22px;
             border-radius: 0 12px 12px 0;
             position: relative;
             transition: all 0.3s ease;
@@ -565,28 +566,28 @@
         .quote-card::before {
             content: '"';
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--gold);
             opacity: 0.3;
             position: absolute;
             top: 5px;
-            left: 15px;
+            left: 12px;
             line-height: 1;
         }
 
         .quote-card p {
             font-family: 'Playfair Display', serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.7;
             color: var(--cream);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             position: relative;
             z-index: 1;
         }
 
         .quote-author {
             color: var(--gold);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
         }
 
@@ -594,8 +595,8 @@
         .process-steps {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            max-width: 900px;
+            gap: 45px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
@@ -603,20 +604,20 @@
             flex: 1;
             text-align: center;
             position: relative;
-            min-width: 200px;
+            min-width: 180px;
         }
 
         .step-number {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, var(--gold), var(--dark-gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
+            margin: 0 auto 12px;
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--dark-purple);
             font-weight: bold;
             position: relative;
@@ -626,9 +627,9 @@
         .step::after {
             content: '';
             position: absolute;
-            top: 27px;
-            right: -35px;
-            width: 50px;
+            top: 25px;
+            right: -30px;
+            width: 45px;
             height: 2px;
             background: linear-gradient(90deg, var(--gold), transparent);
             z-index: 1;
@@ -641,13 +642,13 @@
         .step h3 {
             font-family: 'Cinzel', serif;
             color: var(--white);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
+            margin-bottom: 6px;
+            font-size: 1rem;
         }
 
         .step p {
             color: rgba(245, 240, 232, 0.7);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.6;
         }
 
@@ -659,7 +660,7 @@
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -668,7 +669,7 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: 16px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             transition: all 0.4s ease;
         }
@@ -679,64 +680,64 @@
         }
 
         .testimonial-avatar {
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gold), var(--dark-gold));
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 1.5rem;
+            margin: 0 auto 12px;
+            font-size: 1.3rem;
             color: var(--dark-purple);
             font-weight: bold;
         }
 
         .stars-rating {
             color: var(--gold);
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
         }
 
         .testimonial-text {
             font-style: italic;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.7;
             color: rgba(245, 240, 232, 0.9);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .testimonial-name {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin-bottom: 3px;
         }
 
         .testimonial-date {
             color: rgba(245, 240, 232, 0.5);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(45, 27, 78, 0.8));
             text-align: center;
-            padding: 80px 30px;
+            padding: 70px 25px;
         }
 
         .cta-section h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--white);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .cta-section p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: rgba(245, 240, 232, 0.8);
-            margin-bottom: 35px;
-            max-width: 550px;
+            margin-bottom: 30px;
+            max-width: 500px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
@@ -745,7 +746,7 @@
         /* Footer */
         footer {
             background: rgba(10, 6, 20, 0.95);
-            padding: 50px 30px 25px;
+            padding: 45px 25px 20px;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
             z-index: 1;
@@ -756,15 +757,15 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 35px;
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
         .footer-section h3 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-size: 1rem;
         }
 
         .footer-section p, .footer-section a {
@@ -772,7 +773,7 @@
             text-decoration: none;
             line-height: 1.8;
             transition: color 0.3s ease;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: block;
         }
 
@@ -782,26 +783,26 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 25px;
+            padding-top: 20px;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
             color: rgba(245, 240, 232, 0.5);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, #25d366, #128c7e);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 999;
             cursor: pointer;
@@ -860,7 +861,7 @@
 
             .trust-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 20px;
             }
 
             .footer-content {
@@ -868,20 +869,20 @@
             }
 
             .hero h1 {
-                font-size: 2.6rem;
+                font-size: 2.4rem;
             }
 
             .hero h1 span {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .process-steps {
-                gap: 30px;
+                gap: 25px;
             }
 
             .step::after {
-                right: -25px;
-                width: 30px;
+                right: -20px;
+                width: 25px;
             }
         }
 
@@ -890,7 +891,7 @@
         /* ===================================================== */
         @media (max-width: 768px) {
             nav {
-                padding: 12px 20px;
+                padding: 10px 18px;
             }
 
             .nav-links {
@@ -901,8 +902,8 @@
                 width: 100%;
                 background: rgba(26, 15, 46, 0.98);
                 flex-direction: column;
-                padding: 20px;
-                gap: 12px;
+                padding: 18px;
+                gap: 10px;
                 border-top: 1px solid rgba(212, 175, 55, 0.2);
             }
 
@@ -911,122 +912,130 @@
             }
 
             .nav-links a {
-                font-size: 1rem;
-                padding: 8px 0;
+                font-size: 0.95rem;
+                padding: 6px 0;
             }
 
             .mobile-menu-btn {
                 display: block;
             }
 
+            /* ===== MOBILE HERO ===== */
             .hero {
-                padding: 90px 20px 50px;
+                padding: 70px 18px 40px;
                 min-height: auto;
-                padding-bottom: 80px;
+                min-height: 85vh;
+            }
+
+            .hero-content {
+                padding-top: 10px;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.7rem;
                 line-height: 1.2;
+                margin-bottom: 10px;
             }
 
             .hero h1 span {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
 
             .hero-subtitle {
-                font-size: 0.95rem;
-                padding: 0 10px;
+                font-size: 0.9rem;
+                padding: 0 5px;
+                margin-bottom: 22px;
             }
 
             .hero-badge {
-                font-size: 0.8rem;
-                padding: 6px 15px;
+                font-size: 0.75rem;
+                padding: 5px 14px;
+                margin-bottom: 15px;
             }
 
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 12px;
+                gap: 10px;
             }
 
             .btn {
                 width: 100%;
-                max-width: 280px;
+                max-width: 260px;
                 justify-content: center;
-                padding: 12px 25px;
-                font-size: 0.9rem;
+                padding: 11px 22px;
+                font-size: 0.88rem;
             }
 
             .float-card {
-                max-width: 120px;
-                padding: 10px;
+                max-width: 110px;
+                padding: 8px;
             }
 
             .float-card i {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             .float-card p {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
             }
 
-            .fc-1 { top: 12%; left: 5%; }
-            .fc-2 { top: 60%; right: 5%; }
-            .fc-3 { bottom: 12%; left: 8%; }
+            .fc-1 { top: 8%; left: 4%; }
+            .fc-2 { top: 65%; right: 4%; }
+            .fc-3 { bottom: 8%; left: 6%; }
 
             section {
-                padding: 60px 20px;
+                padding: 50px 18px;
             }
 
             .section-header h2 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .section-header p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .services-grid,
             .quotes-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 18px;
             }
 
             .service-card {
-                padding: 25px 20px;
+                padding: 22px 18px;
             }
 
             .service-icon {
-                width: 55px;
-                height: 55px;
-                font-size: 1.4rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
             }
 
             .service-card h3 {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .service-card p {
-                font-size: 0.85rem;
+                font-size: 0.82rem;
             }
 
             .trust-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+                gap: 18px;
             }
 
             .trust-item i {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
 
             .trust-item h3 {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .trust-item p {
-                font-size: 0.8rem;
+                font-size: 0.75rem;
             }
 
             .quotes-grid {
@@ -1034,16 +1043,16 @@
             }
 
             .quote-card {
-                padding: 20px;
+                padding: 18px;
             }
 
             .quote-card p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .process-steps {
                 flex-direction: column;
-                gap: 30px;
+                gap: 25px;
             }
 
             .step {
@@ -1059,37 +1068,37 @@
             }
 
             .testimonial-card {
-                padding: 25px 20px;
+                padding: 22px 18px;
             }
 
             .cta-section {
-                padding: 60px 20px;
+                padding: 50px 18px;
             }
 
             .cta-section h2 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
 
             .cta-section p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 22px;
                 text-align: center;
             }
 
             .footer-section h3 {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 1.6rem;
-                bottom: 20px;
-                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 15px;
+                right: 15px;
             }
         }
 
@@ -1097,21 +1106,26 @@
         /* SMALL MOBILE (max-width: 480px) */
         /* ===================================================== */
         @media (max-width: 480px) {
+            .hero {
+                padding: 65px 15px 35px;
+                min-height: 80vh;
+            }
+
             .hero h1 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
 
             .hero h1 span {
-                font-size: 1.4rem;
+                font-size: 1.25rem;
             }
 
             .hero-subtitle {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
 
             .trust-container {
                 grid-template-columns: 1fr;
-                gap: 15px;
+                gap: 12px;
             }
 
             .float-card {
@@ -1119,7 +1133,7 @@
             }
 
             .section-header h2 {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -1463,11 +1477,11 @@
             WhatsApp üzerinden hemen bize ulaşın ve ücretsiz ilk danışmanlığınızı alın.
         </p>
         <div class="reveal">
-            <a href="https://wa.me/16395697826" class="btn btn-whatsapp" target="_blank" style="font-size: 1.1rem; padding: 16px 40px;">
+            <a href="https://wa.me/16395697826" class="btn btn-whatsapp" target="_blank" style="font-size: 1rem; padding: 14px 35px;">
                 <i class="fab fa-whatsapp"></i> +1 (639) 569-7826
             </a>
         </div>
-        <p style="margin-top: 20px; color: rgba(245, 240, 232, 0.6); font-size: 0.9rem;" class="reveal">
+        <p style="margin-top: 18px; color: rgba(245, 240, 232, 0.6); font-size: 0.85rem;" class="reveal">
             <i class="fas fa-lock"></i> %100 Gizlilik Garantisi | 7/24 WhatsApp Destek
         </p>
     </section>
@@ -1506,7 +1520,7 @@
         
         <div class="footer-bottom">
             <p>© 2026 Elif Hoca Spiritüel Danışmanlık. Tüm Hakları Saklıdır.</p>
-            <p style="margin-top: 8px; font-size: 0.8rem;">Bu site bilgilendirme amaçlıdır.</p>
+            <p style="margin-top: 6px; font-size: 0.75rem;">Bu site bilgilendirme amaçlıdır.</p>
         </div>
     </footer>
 
