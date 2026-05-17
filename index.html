@@ -24,11 +24,16 @@
             --text-dark: #2c1810;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             background: var(--dark-purple);
             color: var(--cream);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         /* Custom Scrollbar */
@@ -73,44 +78,44 @@
         .orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.15;
+            filter: blur(100px);
+            opacity: 0.08;
             pointer-events: none;
             z-index: 0;
-            animation: float-orb 20s ease-in-out infinite;
+            animation: float-orb 25s ease-in-out infinite;
         }
 
         .orb-1 {
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: var(--gold);
-            top: 10%;
-            left: -10%;
+            top: 5%;
+            left: -15%;
             animation-delay: 0s;
         }
 
         .orb-2 {
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background: #8b5cf6;
-            top: 60%;
-            right: -5%;
-            animation-delay: -7s;
+            top: 50%;
+            right: -10%;
+            animation-delay: -8s;
         }
 
         .orb-3 {
-            width: 250px;
-            height: 250px;
+            width: 350px;
+            height: 350px;
             background: #ec4899;
-            bottom: 10%;
-            left: 30%;
-            animation-delay: -14s;
+            bottom: 5%;
+            left: 20%;
+            animation-delay: -16s;
         }
 
         @keyframes float-orb {
             0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(50px, -30px) scale(1.1); }
-            66% { transform: translate(-30px, 50px) scale(0.9); }
+            33% { transform: translate(30px, -20px) scale(1.05); }
+            66% { transform: translate(-20px, 30px) scale(0.95); }
         }
 
         /* Navigation */
@@ -118,34 +123,35 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 50px;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(26, 15, 46, 0.9);
+            background: rgba(26, 15, 46, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            padding: 15px 50px;
+            padding: 10px 30px;
             background: rgba(26, 15, 46, 0.98);
         }
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--gold);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            white-space: nowrap;
         }
 
         .logo i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             animation: rotate-slow 10s linear infinite;
         }
 
@@ -156,17 +162,19 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             color: var(--cream);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
             padding: 5px 0;
             transition: color 0.3s ease;
+            white-space: nowrap;
         }
 
         .nav-links a::after {
@@ -191,12 +199,12 @@
         .nav-whatsapp {
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white !important;
-            padding: 10px 25px !important;
+            padding: 8px 20px !important;
             border-radius: 50px;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             animation: pulse-glow 2s ease-in-out infinite;
         }
 
@@ -206,7 +214,18 @@
 
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 0 20px 5px rgba(37, 211, 102, 0.2); }
+            50% { box-shadow: 0 0 15px 3px rgba(37, 211, 102, 0.2); }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
         }
 
         /* Hero Section */
@@ -216,34 +235,36 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 120px 50px 80px;
+            padding: 100px 30px 60px;
             overflow: hidden;
         }
 
         .hero-content {
             text-align: center;
-            max-width: 900px;
+            max-width: 800px;
             z-index: 1;
+            position: relative;
         }
 
         .hero-badge {
             display: inline-block;
-            padding: 8px 25px;
+            padding: 8px 20px;
             border: 1px solid var(--gold);
             border-radius: 50px;
             color: var(--gold);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
             animation: fade-in-up 1s ease;
             background: rgba(212, 175, 55, 0.1);
+            white-space: nowrap;
         }
 
         .hero h1 {
             font-family: 'Cinzel', serif;
-            font-size: 4rem;
+            font-size: 3.2rem;
             color: var(--white);
-            margin-bottom: 20px;
-            line-height: 1.2;
+            margin-bottom: 15px;
+            line-height: 1.3;
             animation: fade-in-up 1s ease 0.2s both;
             text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
         }
@@ -251,29 +272,32 @@
         .hero h1 span {
             color: var(--gold);
             display: block;
-            font-size: 3rem;
+            font-size: 2.4rem;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: rgba(245, 240, 232, 0.8);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             animation: fade-in-up 1s ease 0.4s both;
             font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             animation: fade-in-up 1s ease 0.6s both;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 15px 40px;
+            padding: 14px 32px;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -281,29 +305,30 @@
             border: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            white-space: nowrap;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--gold), var(--dark-gold));
             color: var(--dark-purple);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
         }
 
         .btn-whatsapp {
             background: linear-gradient(135deg, #25d366, #128c7e);
             color: white;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
         }
 
         .btn-whatsapp:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
         }
 
         @keyframes fade-in-up {
@@ -317,7 +342,7 @@
             }
         }
 
-        /* Floating Cards Animation */
+        /* Floating Cards */
         .floating-cards {
             position: absolute;
             width: 100%;
@@ -332,48 +357,50 @@
             position: absolute;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px;
             backdrop-filter: blur(5px);
-            animation: float-card 15s ease-in-out infinite;
+            animation: float-card 18s ease-in-out infinite;
+            max-width: 160px;
+            text-align: center;
         }
 
         .float-card i {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            display: block;
         }
 
         .float-card p {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: rgba(245, 240, 232, 0.7);
+            line-height: 1.4;
         }
 
-        .fc-1 { top: 20%; left: 5%; animation-delay: 0s; }
-        .fc-2 { top: 60%; right: 5%; animation-delay: -5s; }
-        .fc-3 { bottom: 20%; left: 10%; animation-delay: -10s; }
+        .fc-1 { top: 15%; left: 8%; animation-delay: 0s; }
+        .fc-2 { top: 55%; right: 8%; animation-delay: -6s; }
+        .fc-3 { bottom: 15%; left: 12%; animation-delay: -12s; }
 
         @keyframes float-card {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
         }
 
-        /* Trust Badges */
+        /* Trust Badges Section */
         .trust-section {
-            padding: 60px 50px;
+            padding: 50px 30px;
             background: rgba(26, 15, 46, 0.5);
             position: relative;
             z-index: 1;
         }
 
         .trust-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
         }
 
         .trust-item {
@@ -382,26 +409,27 @@
         }
 
         .trust-item i {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: var(--gold);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .trust-item h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             color: var(--white);
             margin-bottom: 5px;
         }
 
         .trust-item p {
             color: rgba(245, 240, 232, 0.7);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         /* Section Styles */
         section {
-            padding: 100px 50px;
+            padding: 80px 30px;
             position: relative;
             z-index: 1;
         }
@@ -409,43 +437,43 @@
         .section-header {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 60px;
+            margin: 0 auto 50px;
         }
 
         .section-header h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.8rem;
+            font-size: 2.4rem;
             color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .section-header p {
             color: rgba(245, 240, 232, 0.8);
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         .divider {
             width: 80px;
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            margin: 20px auto;
+            margin: 15px auto;
         }
 
         /* Services Section */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 20px;
-            padding: 40px 30px;
+            border-radius: 16px;
+            padding: 35px 25px;
             text-align: center;
             transition: all 0.4s ease;
             position: relative;
@@ -459,7 +487,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent);
             transition: left 0.6s ease;
         }
 
@@ -468,21 +496,21 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: rgba(212, 175, 55, 0.4);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 65px;
+            height: 65px;
             background: rgba(212, 175, 55, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2rem;
+            margin: 0 auto 20px;
+            font-size: 1.6rem;
             color: var(--gold);
             border: 2px solid rgba(212, 175, 55, 0.3);
             transition: all 0.3s ease;
@@ -491,20 +519,20 @@
         .service-card:hover .service-icon {
             background: rgba(212, 175, 55, 0.2);
             transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
         }
 
         .service-card h3 {
             font-family: 'Cinzel', serif;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--white);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .service-card p {
             color: rgba(245, 240, 232, 0.7);
-            line-height: 1.8;
-            font-size: 0.95rem;
+            line-height: 1.7;
+            font-size: 0.9rem;
         }
 
         /* Trust Quotes Section */
@@ -514,147 +542,81 @@
 
         .quotes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .quote-card {
             background: rgba(255, 255, 255, 0.05);
-            border-left: 4px solid var(--gold);
-            padding: 30px;
-            border-radius: 0 15px 15px 0;
+            border-left: 3px solid var(--gold);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
             position: relative;
             transition: all 0.3s ease;
         }
 
         .quote-card:hover {
-            transform: translateX(10px);
+            transform: translateX(5px);
             background: rgba(255, 255, 255, 0.08);
         }
 
         .quote-card::before {
             content: '"';
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
+            font-size: 3rem;
             color: var(--gold);
             opacity: 0.3;
             position: absolute;
-            top: 10px;
-            left: 20px;
+            top: 5px;
+            left: 15px;
+            line-height: 1;
         }
 
         .quote-card p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1rem;
+            line-height: 1.7;
             color: var(--cream);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             position: relative;
             z-index: 1;
         }
 
         .quote-author {
             color: var(--gold);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--dark-purple);
-        }
-
-        .testimonials-slider {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            margin: 20px;
-            transition: all 0.4s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: scale(1.02);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .testimonial-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            color: var(--dark-purple);
-            font-weight: bold;
-        }
-
-        .stars-rating {
-            color: var(--gold);
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: rgba(245, 240, 232, 0.9);
-            margin-bottom: 20px;
-        }
-
-        .testimonial-name {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            font-size: 1.1rem;
-        }
-
-        .testimonial-date {
-            color: rgba(245, 240, 232, 0.5);
             font-size: 0.85rem;
+            font-weight: 600;
         }
 
         /* Process Section */
         .process-steps {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            max-width: 1200px;
+            gap: 50px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         .step {
             flex: 1;
-            min-width: 250px;
-            max-width: 300px;
             text-align: center;
             position: relative;
+            min-width: 200px;
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, var(--gold), var(--dark-gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--dark-purple);
             font-weight: bold;
             position: relative;
@@ -664,9 +626,9 @@
         .step::after {
             content: '';
             position: absolute;
-            top: 30px;
-            right: -50%;
-            width: 100%;
+            top: 27px;
+            right: -35px;
+            width: 50px;
             height: 2px;
             background: linear-gradient(90deg, var(--gold), transparent);
             z-index: 1;
@@ -679,69 +641,139 @@
         .step h3 {
             font-family: 'Cinzel', serif;
             color: var(--white);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
         }
 
         .step p {
             color: rgba(245, 240, 232, 0.7);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--dark-purple);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .testimonial-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            color: var(--dark-purple);
+            font-weight: bold;
+        }
+
+        .stars-rating {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(245, 240, 232, 0.9);
+            margin-bottom: 15px;
+        }
+
+        .testimonial-name {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .testimonial-date {
+            color: rgba(245, 240, 232, 0.5);
+            font-size: 0.8rem;
         }
 
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(45, 27, 78, 0.8));
             text-align: center;
-            padding: 100px 50px;
+            padding: 80px 30px;
         }
 
         .cta-section h2 {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--white);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .cta-section p {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: rgba(245, 240, 232, 0.8);
-            margin-bottom: 40px;
-            max-width: 600px;
+            margin-bottom: 35px;
+            max-width: 550px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
 
         /* Footer */
         footer {
             background: rgba(10, 6, 20, 0.95);
-            padding: 60px 50px 30px;
+            padding: 50px 30px 25px;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
             z-index: 1;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 35px;
         }
 
         .footer-section h3 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
         .footer-section p, .footer-section a {
             color: rgba(245, 240, 232, 0.7);
             text-decoration: none;
-            line-height: 2;
+            line-height: 1.8;
             transition: color 0.3s ease;
+            font-size: 0.9rem;
+            display: block;
         }
 
         .footer-section a:hover {
@@ -750,27 +782,27 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 25px;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
             color: rgba(245, 240, 232, 0.5);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #25d366, #128c7e);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            font-size: 1.8rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 999;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -780,7 +812,7 @@
 
         .whatsapp-float:hover {
             transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
         }
 
         @keyframes bounce-in {
@@ -791,87 +823,19 @@
 
         @keyframes pulse {
             0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            50% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
         }
 
         /* Scroll Reveal */
         .reveal {
             opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
+            transform: translateY(40px);
+            transition: all 0.7s ease;
         }
 
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--gold);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(26, 15, 46, 0.98);
-                flex-direction: column;
-                padding: 20px;
-                gap: 15px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h1 span {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-            .step::after {
-                display: none;
-            }
-
-            .quotes-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Particle Canvas */
-        #particles-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
         }
 
         /* Glowing Text Effect */
@@ -884,20 +848,281 @@
             to { text-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.2); }
         }
 
-        /* Loading Animation for Cards */
-        .service-card, .quote-card, .testimonial-card {
-            animation: card-appear 0.6s ease forwards;
-            opacity: 0;
+        /* ===================================================== */
+        /* TABLET RESPONSIVE (max-width: 1024px) */
+        /* ===================================================== */
+        @media (max-width: 1024px) {
+            .services-grid,
+            .quotes-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero h1 span {
+                font-size: 2rem;
+            }
+
+            .process-steps {
+                gap: 30px;
+            }
+
+            .step::after {
+                right: -25px;
+                width: 30px;
+            }
         }
 
-        @keyframes card-appear {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        /* ===================================================== */
+        /* MOBILE RESPONSIVE (max-width: 768px) */
+        /* ===================================================== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 12px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(26, 15, 46, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 12px;
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 90px 20px 50px;
+                min-height: auto;
+                padding-bottom: 80px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero h1 span {
+                font-size: 1.6rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .float-card {
+                max-width: 120px;
+                padding: 10px;
+            }
+
+            .float-card i {
+                font-size: 1.2rem;
+            }
+
+            .float-card p {
+                font-size: 0.7rem;
+            }
+
+            .fc-1 { top: 12%; left: 5%; }
+            .fc-2 { top: 60%; right: 5%; }
+            .fc-3 { bottom: 12%; left: 8%; }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 0.95rem;
+            }
+
+            .services-grid,
+            .quotes-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-card {
+                padding: 25px 20px;
+            }
+
+            .service-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 1.4rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .service-card p {
+                font-size: 0.85rem;
+            }
+
+            .trust-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .trust-item i {
+                font-size: 1.6rem;
+            }
+
+            .trust-item h3 {
+                font-size: 1rem;
+            }
+
+            .trust-item p {
+                font-size: 0.8rem;
+            }
+
+            .quotes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quote-card {
+                padding: 20px;
+            }
+
+            .quote-card p {
+                font-size: 0.95rem;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .step {
+                max-width: 100%;
+            }
+
+            .step::after {
+                display: none;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.7rem;
+            }
+
+            .cta-section p {
+                font-size: 0.95rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* ===================================================== */
+        /* SMALL MOBILE (max-width: 480px) */
+        /* ===================================================== */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero h1 span {
+                font-size: 1.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .trust-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .float-card {
+                display: none;
+            }
+
+            .section-header h2 {
+                font-size: 1.6rem;
             }
         }
     </style>
-<base target="_blank">
 </head>
 <body>
     <!-- Background Effects -->
@@ -913,15 +1138,15 @@
             <i class="fas fa-moon"></i>
             Elif Hoca
         </a>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü">
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#anasayfa">Anasayfa</a></li>
-            <li><a href="#hizmetler">Hizmetler</a></li>
-            <li><a href="#neden-biz">Neden Biz?</a></li>
-            <li><a href="#yorumlar">Yorumlar</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="#anasayfa" onclick="closeMenu()">Anasayfa</a></li>
+            <li><a href="#hizmetler" onclick="closeMenu()">Hizmetler</a></li>
+            <li><a href="#neden-biz" onclick="closeMenu()">Neden Biz?</a></li>
+            <li><a href="#yorumlar" onclick="closeMenu()">Yorumlar</a></li>
+            <li><a href="#iletisim" onclick="closeMenu()">İletişim</a></li>
             <li><a href="https://wa.me/16395697826" class="nav-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a></li>
@@ -944,7 +1169,7 @@
                 <p>%100 Gizlilik Garantisi</p>
             </div>
         </div>
-
+        
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-sparkles"></i> Spiritüel Rehberlik ve Medyumluk
@@ -1001,54 +1226,54 @@
             <div class="divider"></div>
             <p>Hayatınızın her alanında size rehberlik etmek için buradayız. Uzmanlık alanlarımızla tanışın.</p>
         </div>
-
+        
         <div class="services-grid">
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-heart"></i>
                 </div>
                 <h3>Aşk & İlişki Falı</h3>
-                <p>Kalbinizin sesini dinleyin. Sevgilinizin duygularını, ilişkinizin geleceğini ve aşk hayatınızdaki fırsatları öğrenin. Gerçek aşkı bulmanın yolu buradan geçer.</p>
+                <p>Kalbinizin sesini dinleyin. Sevgilinizin duygularını, ilişkinizin geleceğini ve aşk hayatınızdaki fırsatları öğrenin.</p>
             </div>
-
+            
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
                 <h3>Kariyer & İş Falı</h3>
-                <p>Profesyonel hayatınızdaki engelleri aşın. Yeni iş fırsatları, terfi olasılıkları ve iş hayatınızdaki başarı yolculuğunuz hakkında detaylı bilgi alın.</p>
+                <p>Profesyonel hayatınızdaki engelleri aşın. Yeni iş fırsatları ve terfi olasılıkları hakkında bilgi alın.</p>
             </div>
-
+            
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-coins"></i>
                 </div>
                 <h3>Para & Bereket Falı</h3>
-                <p>Finansal özgürlüğünüzün kapılarını aralayın. Bereketinizi artıracak yöntemler, para akışınız ve maddi konulardaki şansınız hakkında rehberlik ediyoruz.</p>
+                <p>Finansal özgürlüğünüzün kapılarını aralayın. Bereketinizi artıracak yöntemler ve para akışınız hakkında rehberlik.</p>
             </div>
-
+            
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-home"></i>
                 </div>
                 <h3>Aile & Sıhhat Falı</h3>
-                <p>Aile içi huzurunuzu koruyun. Sağlık, aile ilişkileri ve ev hayatınızdaki olumlu gelişmeler hakkında bilgi edinin. Huzurlu bir yaşam için adım atın.</p>
+                <p>Aile içi huzurunuzu koruyun. Sağlık ve aile ilişkileri hakkında bilgi edinin. Huzurlu bir yaşam için adım atın.</p>
             </div>
-
+            
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-magic"></i>
                 </div>
                 <h3>Büyü & Ritüel</h3>
-                <p>Enerjinizi dengeleyin ve negatif etkilerden arının. Koruma büyüleri, bağlama işlemleri ve enerji arındırma ritüelleri ile hayatınıza pozitiflik katın.</p>
+                <p>Enerjinizi dengeleyin ve negatif etkilerden arının. Koruma büyüleri ve enerji arındırma ritüelleri.</p>
             </div>
-
+            
             <div class="service-card reveal">
                 <div class="service-icon">
                     <i class="fas fa-eye"></i>
                 </div>
                 <h3>Rüya Yorumu</h3>
-                <p>Rüyalarınızın gizemli dünyasını keşfedin. Bilinçaltınızın size verdiği mesajları uzman yorumlarıyla anlamlandırın ve hayatınıza yön verin.</p>
+                <p>Rüyalarınızın gizemli dünyasını keşfedin. Bilinçaltınızın size verdiği mesajları uzman yorumlarıyla anlamlandırın.</p>
             </div>
         </div>
     </section>
@@ -1060,33 +1285,33 @@
             <div class="divider"></div>
             <p>Binlerce danışanımızın güvenini kazanan ilkelerimiz ve sizlere sözümüz.</p>
         </div>
-
+        
         <div class="quotes-grid">
             <div class="quote-card reveal">
                 <p>Her danışanımız benim için bir emanettir. Gizliliğiniz ve huzurunuz benim en önemli önceliğimdir.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
             </div>
-
+            
             <div class="quote-card reveal">
                 <p>Gerçek medyumluk, geleceği görmekten çok, insanlara umut ve yön vermektir. Biz burada sizin için varız.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
             </div>
-
+            
             <div class="quote-card reveal">
                 <p>Karanlık günler geçicidir. Doğru rehberlikle her kapı aralanır, her sorun çözülür. Yalnız değilsiniz.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
             </div>
-
+            
             <div class="quote-card reveal">
                 <p>İnandığınızda mucizeler gerçekleşir. Biz size inanmanız için gereken ışığı gösteriyoruz.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
             </div>
-
+            
             <div class="quote-card reveal">
                 <p>Geçmişiniz sizi tanımlamaz. Geleceğinizi bugün attığınız adımlar belirler. Birlikte yeni bir başlangıç yapalım.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
             </div>
-
+            
             <div class="quote-card reveal">
                 <p>Samimiyet ve doğruluk bizim temel prensibimizdir. Size her zaman dürüst ve açık bilgiler sunuyoruz.</p>
                 <div class="quote-author">— Elif Hoca, Kurucu & Baş Medyum</div>
@@ -1101,20 +1326,20 @@
             <div class="divider"></div>
             <p>Sadece üç adımda spiritüel rehberliğinize ulaşabilirsiniz.</p>
         </div>
-
+        
         <div class="process-steps">
             <div class="step reveal">
                 <div class="step-number">1</div>
                 <h3>İletişime Geçin</h3>
                 <p>WhatsApp üzerinden bize ulaşın. Size özel danışmanlık sürecimizi başlatalım.</p>
             </div>
-
+            
             <div class="step reveal">
                 <div class="step-number">2</div>
                 <h3>Falınıza Bakalım</h3>
                 <p>Uzman medyumlarımız size özel fallarınızı hazırlasın ve detaylı yorumlasın.</p>
             </div>
-
+            
             <div class="step reveal">
                 <div class="step-number">3</div>
                 <h3>Hayatınız Değişsin</h3>
@@ -1130,8 +1355,8 @@
             <div class="divider"></div>
             <p>Gerçek hikayeler, gerçek dönüşümler. Binlerce mutlu danışanımızdan bazılarının yorumları.</p>
         </div>
-
-        <div class="testimonials-slider">
+        
+        <div class="testimonials-grid">
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">A</div>
                 <div class="stars-rating">
@@ -1142,13 +1367,12 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "Elif Hoca ile tanıştıktan sonra hayatım tamamen değişti. Aşk falımda söyledikleri bir bir çıktı. 
-                    Şimdi hayatımın aşkıyla evliyim. Sonsuz teşekkürler!"
+                    "Elif Hoca ile tanıştıktan sonra hayatım tamamen değişti. Aşk falımda söyledikleri bir bir çıktı. Şimdi hayatımın aşkıyla evliyim!"
                 </p>
                 <div class="testimonial-name">Ayşe K.</div>
                 <div class="testimonial-date">İstanbul — Mart 2026</div>
             </div>
-
+            
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">M</div>
                 <div class="stars-rating">
@@ -1159,13 +1383,12 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "İş hayatımda çok zor bir dönemden geçiyordum. Kariyer falı sayesinde doğru kararları aldım 
-                    ve şimdi hayal ettiğim pozisyona geldim. Kesinlikle tavsiye ediyorum."
+                    "İş hayatımda çok zor bir dönemden geçiyordum. Kariyer falı sayesinde doğru kararları aldım ve şimdi hayal ettiğim pozisyona geldim."
                 </p>
                 <div class="testimonial-name">Mehmet T.</div>
                 <div class="testimonial-date">Ankara — Şubat 2026</div>
             </div>
-
+            
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">S</div>
                 <div class="stars-rating">
@@ -1176,13 +1399,12 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "Negatif enerjiden çok çekiyordum. Yapılan enerji arındırma ritüeli sonrası kendimi çok daha 
-                    hafif ve mutlu hissediyorum. Elif Hoca'ya minnettarım."
+                    "Negatif enerjiden çok çekiyordum. Yapılan enerji arındırma ritüeli sonrası kendimi çok daha hafif ve mutlu hissediyorum."
                 </p>
                 <div class="testimonial-name">Selin Y.</div>
                 <div class="testimonial-date">İzmir — Ocak 2026</div>
             </div>
-
+            
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">E</div>
                 <div class="stars-rating">
@@ -1193,13 +1415,12 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "Ailemle yaşadığım sorunlar beni çok yıpratmıştı. Aile falı ve verilen tavsiyeler sayesinde 
-                    evimde huzur buldum. Çok teşekkür ederim Elif Hoca."
+                    "Ailemle yaşadığım sorunlar beni çok yıpratmıştı. Aile falı ve verilen tavsiyeler sayesinde evimde huzur buldum."
                 </p>
                 <div class="testimonial-name">Emine B.</div>
                 <div class="testimonial-date">Bursa — Aralık 2025</div>
             </div>
-
+            
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">K</div>
                 <div class="stars-rating">
@@ -1210,13 +1431,12 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "Rüya yorumları inanılmaz doğru çıkıyor. Bilinçaltımdaki korkularımı anlamamı sağladı. 
-                    Artık daha bilinçli ve huzurlu bir hayat yaşıyorum."
+                    "Rüya yorumları inanılmaz doğru çıkıyor. Bilinçaltımdaki korkularımı anlamamı sağladı. Artık daha bilinçli bir hayat yaşıyorum."
                 </p>
                 <div class="testimonial-name">Kemal S.</div>
                 <div class="testimonial-date">Antalya — Kasım 2025</div>
             </div>
-
+            
             <div class="testimonial-card reveal">
                 <div class="testimonial-avatar">Z</div>
                 <div class="stars-rating">
@@ -1227,8 +1447,7 @@
                     <i class="fas fa-star"></i>
                 </div>
                 <p class="testimonial-text">
-                    "Para falımda söylenenler gerçekleşti! Finansal olarak çok zor bir dönemden geçiyordum 
-                    ama şimdi durumum çok daha iyi. Bereket duaları için teşekkürler."
+                    "Para falımda söylenenler gerçekleşti! Finansal olarak çok zor bir dönemden geçiyordum ama şimdi durumum çok daha iyi."
                 </p>
                 <div class="testimonial-name">Zeynep A.</div>
                 <div class="testimonial-date">Adana — Ekim 2025</div>
@@ -1244,7 +1463,7 @@
             WhatsApp üzerinden hemen bize ulaşın ve ücretsiz ilk danışmanlığınızı alın.
         </p>
         <div class="reveal">
-            <a href="https://wa.me/16395697826" class="btn btn-whatsapp" target="_blank" style="font-size: 1.2rem; padding: 18px 50px;">
+            <a href="https://wa.me/16395697826" class="btn btn-whatsapp" target="_blank" style="font-size: 1.1rem; padding: 16px 40px;">
                 <i class="fab fa-whatsapp"></i> +1 (639) 569-7826
             </a>
         </div>
@@ -1258,26 +1477,25 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3><i class="fas fa-moon"></i> Elif Hoca</h3>
-                <p>20 yılı aşkın tecrübemizle sizlere en iyi spiritüel danışmanlık hizmetini sunuyoruz. 
-                Gizlilik, samimiyet ve profesyonellik bizim temel prensibimizdir.</p>
+                <p>20 yılı aşkın tecrübemizle sizlere en iyi spiritüel danışmanlık hizmetini sunuyoruz.</p>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Hızlı Bağlantılar</h3>
-                <p><a href="#anasayfa">Anasayfa</a></p>
-                <p><a href="#hizmetler">Hizmetlerimiz</a></p>
-                <p><a href="#yorumlar">Danışan Yorumları</a></p>
-                <p><a href="#iletisim">İletişim</a></p>
+                <a href="#anasayfa">Anasayfa</a>
+                <a href="#hizmetler">Hizmetlerimiz</a>
+                <a href="#yorumlar">Danışan Yorumları</a>
+                <a href="#iletisim">İletişim</a>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Hizmetlerimiz</h3>
-                <p><a href="#hizmetler">Aşk & İlişki Falı</a></p>
-                <p><a href="#hizmetler">Kariyer & İş Falı</a></p>
-                <p><a href="#hizmetler">Büyü & Ritüel</a></p>
-                <p><a href="#hizmetler">Rüya Yorumu</a></p>
+                <a href="#hizmetler">Aşk & İlişki Falı</a>
+                <a href="#hizmetler">Kariyer & İş Falı</a>
+                <a href="#hizmetler">Büyü & Ritüel</a>
+                <a href="#hizmetler">Rüya Yorumu</a>
             </div>
-
+            
             <div class="footer-section">
                 <h3>İletişim</h3>
                 <p><i class="fab fa-whatsapp" style="color: #25d366;"></i> <a href="https://wa.me/16395697826" target="_blank">+1 (639) 569-7826</a></p>
@@ -1285,15 +1503,15 @@
                 <p><i class="fas fa-globe"></i> Dünya Geneli Online Hizmet</p>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
             <p>© 2026 Elif Hoca Spiritüel Danışmanlık. Tüm Hakları Saklıdır.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">Bu site bilgilendirme amaçlıdır. Tıbbi veya hukuki tavsiye yerine geçmez.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem;">Bu site bilgilendirme amaçlıdır.</p>
         </div>
     </footer>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/16395697826" class="whatsapp-float" target="_blank" title="WhatsApp'tan Bize Ulaşın">
+    <a href="https://wa.me/16395697826" class="whatsapp-float" target="_blank" title="WhatsApp'tan Bize Ulaşın" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1301,7 +1519,7 @@
         // Generate Stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 80; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
@@ -1316,11 +1534,15 @@
         // Particle Canvas
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
 
         let particles = [];
-        const particleCount = 50;
+        const particleCount = window.innerWidth < 768 ? 25 : 50;
 
         class Particle {
             constructor() {
@@ -1331,17 +1553,17 @@
                 this.speedY = Math.random() * 0.5 - 0.25;
                 this.opacity = Math.random() * 0.5 + 0.1;
             }
-
+            
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-
+                
                 if (this.x > canvas.width) this.x = 0;
                 if (this.x < 0) this.x = canvas.width;
                 if (this.y > canvas.height) this.y = 0;
                 if (this.y < 0) this.y = canvas.height;
             }
-
+            
             draw() {
                 ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
                 ctx.beginPath();
@@ -1370,8 +1592,7 @@
         animateParticles();
 
         window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            resizeCanvas();
             initParticles();
         });
 
@@ -1381,8 +1602,8 @@
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-
+                const elementVisible = 100;
+                
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('active');
                 }
@@ -1401,10 +1622,15 @@
             }
         });
 
-        // Mobile Menu Toggle
+        // Mobile Menu
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
         }
 
         // Smooth Scroll
@@ -1417,43 +1643,25 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    document.getElementById('navLinks').classList.remove('active');
                 }
             });
         });
 
-        // Parallax Effect for Floating Cards
-        document.addEventListener('mousemove', (e) => {
-            const cards = document.querySelectorAll('.float-card');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-
-            cards.forEach((card, index) => {
-                const speed = (index + 1) * 10;
-                const xOffset = (window.innerWidth / 2 - e.clientX) / speed;
-                const yOffset = (window.innerHeight / 2 - e.clientY) / speed;
-                card.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        // Parallax Effect for Floating Cards (sadece desktop)
+        if (window.innerWidth > 768) {
+            document.addEventListener('mousemove', (e) => {
+                const cards = document.querySelectorAll('.float-card');
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                cards.forEach((card, index) => {
+                    const speed = (index + 1) * 10;
+                    const xOffset = (window.innerWidth / 2 - e.clientX) / speed;
+                    const yOffset = (window.innerHeight / 2 - e.clientY) / speed;
+                    card.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                });
             });
-        });
-
-        // Service Card Stagger Animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = `${index * 0.1}s`;
-                    entry.target.style.animation = 'card-appear 0.6s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .quote-card, .testimonial-card').forEach(card => {
-            observer.observe(card);
-        });
+        }
     </script>
 </body>
 </html>
